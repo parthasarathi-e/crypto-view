@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HodlInfo</title>
+    <link rel="icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo"><img class="logo-img" src="/images/nav_logo.png" alt=""></div>
+        <div class="dorpdowns">
+            <div class="menu">
+                <select>
+                    <option value="">INR</option>
+                </select>
+            </div>
+            <div class="menu">
+                <select>
+                    <option value="">BTC</option>
+                    <option value="option1">ETH</option>
+                    <option value="option2">SOL</option>
+                </select>
+            </div>
+            <div>
+                <button class="menu-btn">Buy BTC</button>
+            </div>
+        </div>
+        </div>
+        <div class="connect"><form action="/api/tickers" method="post"><input name="ejs" type="text" value="update"><button type="submit" class="connect-button">Update data</button></form></div>
+    </nav>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Platform</th>
+                    <th>Last Traded Price</th>
+                    <th>Buy / Sell Price</th>
+                    <th>Token code</th>
+                    <th>Volume</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% data.map((coin,index)=>{ %>
+                    <tr>
+                        <td><%=index+1%></td>
+                        <td class="platform"><%=coin.name%></td>
+                        <td>₹ <%=coin.last%></td>
+                        <td>₹ <%=coin.buy%> / ₹ <%=coin.sell%></td>
+                        <td class="red"><%=coin.base_unit%></td>
+                        <td class="savings red">₹ <%=coin.volume%></td>
+                    </tr>
+                    <% })%>
+            </tbody>
+        </table>
+    </main>
+</body>
+
+</html>

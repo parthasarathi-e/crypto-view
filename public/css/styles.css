@@ -1,0 +1,132 @@
+*{
+    background-color: #191D28;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+nav{
+    display: flex;
+    margin: 10px;
+    padding: 5px;
+}
+.logo {
+    flex: 1;
+    text-align: left;
+}
+.dropdowns{
+    display: flex;
+    flex:2;
+    text-align: center;
+}
+.connect{
+    flex:1;
+    text-align: right;
+}
+.logo-img{
+    width: 200px;
+}
+.connect-button{
+    background-color: #3dc6c1;
+    color: #fff;
+    margin: 10px;
+    padding: 6px 20px;
+    border-radius: 10px;
+}
+@media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      text-align: center;
+    }
+}
+select{
+    outline: none;
+    display: inline;
+    border:none;
+    background-color: transparent;
+    cursor: pointer;
+}
+input{
+    opacity: 0;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    background-color: #2e3241;
+    color: #fff;
+    border: 0;
+    margin: 10px;
+    padding: 6px 10px;
+    border-radius: 10px;
+    white-space: nowrap;
+    font-weight: 400;
+    user-select: none;
+    line-height: 1.5;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+select > option{
+    color: #fff;
+}
+select:after {
+    display: inline-block;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}
+.menu-btn{
+    background-color: #2e3241;
+    color: #fff;
+    margin-top: 3px;
+    margin-left: 8px;
+    padding: 6px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+.price-table {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 15px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #333C55;
+    color: #8F9BB2;
+  }
+
+  tr:nth-child(even) {
+    background-color: #21283E;
+  }
+
+  tr:nth-child(odd) {
+    background-color: #1A2237;
+  }
+
+  td .platform {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  td .platform img {
+    height: 20px;
+  }
+
+  .savings {
+    font-weight: bold;
+    color: #FF5F5F;
+  }
